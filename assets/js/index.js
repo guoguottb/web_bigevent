@@ -4,12 +4,21 @@ function getUserInfo() {
     url: "/my/userinfo",
     success: function (res) {
       if (res.status !== 0) {
-        location.href = "/login.html";
         return layer.msg(res.message);
       } else {
         renderAvatar(res.data);
       }
     },
+    // complete: function (res) {
+    //   if (
+    //     res.responseJSON.status === 1 &&
+    //     res.responseJSON.message === "身份认证失败！"
+    //   ) {
+    //     console.log(res);
+    //     localStorage.removeItem("token");
+    //     // location.href = "/login.html";
+    //   }
+    // },
   });
 }
 //获取用户信息
