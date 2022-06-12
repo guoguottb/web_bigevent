@@ -47,3 +47,7 @@ $("#btnLogout").on("click", function () {
     // layer.close(index);
   });
 });
+
+function changeBgc() {
+  $("#changeBgc").addClass("layui-this").siblings().removeClass("layui-this");
+}

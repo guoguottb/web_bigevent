@@ -24,7 +24,7 @@ $(() => {
   //接口根标签
   const baseUrl = "http://www.liulongbin.top:3007";
   //注册按钮事件
-  $("#7").on("submit", (e) => {
+  $("#form_reg").on("submit", (e) => {
     //阻止默认行为
     e.preventDefault();
     $.ajax({
@@ -35,7 +35,6 @@ $(() => {
         password: $("#form_reg [name=password]").val(),
       },
       success: (res) => {
-        console.log(res);
         if (res.status !== 0) {
           return layer.msg(res.message);
         }
